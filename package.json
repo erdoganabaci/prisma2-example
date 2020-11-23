@@ -4,7 +4,8 @@
     "dev": "node ./src/server.js",
     "studio": "npx prisma studio --experimental",
     "save-migrate": "npx prisma migrate save --experimental",
-    "migrate": "npx prisma migrate up --experimental"
+    "migrate": "npx prisma migrate up --experimental",
+    "generate-client": "npx prisma generate"
   },
   "dependencies": {
     "@nexus/schema": "0.18.0",
