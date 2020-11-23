@@ -3,6 +3,7 @@
 
 
 type Hospital {
+  address: String!
   id: Int!
   name: String!
 }
@@ -14,7 +15,7 @@ input HospitalCreateInput {
 
 type Mutation {
   createDraft(authorEmail: String, content: String, title: String!): Post
-  createHospital(name: String): Hospital
+  createHospital(address: String, name: String): Hospital
   createOneHospital(data: HospitalCreateInput!): Hospital!
   deleteOnePost(where: PostWhereUniqueInput!): Post
   publish(id: ID): Post

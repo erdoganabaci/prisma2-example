@@ -29,6 +29,7 @@ const Hospital = objectType({
   definition(t) {
     t.model.id()
     t.model.name()
+    t.model.address()
   },
 })
 
@@ -68,11 +69,15 @@ const Mutation = objectType({
       type: 'Hospital',
       args: {
         name: stringArg(),
+        address: stringArg(),
+
       },
-      resolve: (_, { name }, ctx) => {
+      resolve: (_, { name, address }, ctx) => {
         return ctx.prisma.hospital.create({
           data: {
-            name
+            name,
+            address
+
           },
         })
       },

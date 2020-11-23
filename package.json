@@ -1,5 +1,5 @@
 {
-  "name": "typescript-javascript",
+  "name": "my-hospital",
   "scripts": {
     "dev": "node ./src/server.js",
     "studio": "npx prisma studio --experimental",
